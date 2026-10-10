@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Golden Hands</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="nav glass">
+    <a href="/" class="logo">⚒ Golden Hands</a>
+    <div class="controls">
+      <select id="lang" aria-label="Language"><option value="ru">RU</option><option value="uk">UK</option><option value="en">EN</option></select>
+      <button id="themeToggle" type="button" aria-label="Toggle theme">🌙</button>
+    </div>
+  </nav>
+  <main>
+    <section id="loginBox" class="order-form">
+      <h1>Вход администратора</h1>
+      <input id="username" autocomplete="username" placeholder="Логин">
+      <input id="password" type="password" autocomplete="current-password" placeholder="Пароль">
+      <button id="loginBtn" class="btn-primary" type="button">Войти</button>
+      <p id="loginErr" role="status"></p>
+    </section>
+
+    <section id="adminPanel" class="order-form" style="display:none">
+      <div class="admin-heading"><h1>Панель администратора</h1><button id="logoutBtn" type="button">Выйти</button></div>
+
+      <h2>➕ Новая работа</h2>
+      <input id="w_title_ru" placeholder="Название (RU)">
+      <input id="w_title_uk" placeholder="Назва (UK)">
+      <input id="w_title_en" placeholder="Title (EN)">
+      <textarea id="w_desc_ru" placeholder="Описание (RU)"></textarea>
+      <textarea id="w_desc_uk" placeholder="Опис (UK)"></textarea>
+      <textarea id="w_desc_en" placeholder="Description (EN)"></textarea>
+      <input id="w_price" placeholder="Цена (например: от 500 €)">
+      <input type="file" id="w_image" accept="image/*,video/*">
+      <button id="addWork" class="btn-primary" type="button">Добавить работу</button>
+
+      <h2>➕ Новый вопрос теста</h2>
+      <input id="q_ru" placeholder="Вопрос (RU)">
+      <input id="q_uk" placeholder="Питання (UK)">
+      <input id="q_en" placeholder="Question (EN)">
+      <select id="q_type"><option value="text">Текст</option><option value="select">Выбор варианта</option><option value="number">Число</option></select>
+      <input id="q_options" placeholder="Варианты через запятую (для select)">
+      <button id="addQuestion" class="btn-primary" type="button">Добавить вопрос</button>
+
+      <h2>📞 Контакты</h2>
+      <input id="s_phone" placeholder="Телефон">
+      <input id="s_telegram" placeholder="Telegram">
+      <input id="s_email" placeholder="Email">
+      <input id="s_address" placeholder="Адрес">
+      <button id="saveSettings" class="btn-primary" type="button">Сохранить контакты</button>
+
+      <h2>🔔 Заказы</h2><div id="ordersList"></div>
+      <h2>🗑 Работы</h2><div id="worksList"></div>
+      <h2>🗑 Вопросы</h2><div id="questionsList"></div>
+      <p id="adminMessage" role="status"></p>
+    </section>
+  </main>
+  <script src="/js/i18n.js"></script><script src="/js/theme.js"></script><script src="/js/admin.js"></script>
+</body>
+</html>

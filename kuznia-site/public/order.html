@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заказ — Golden Hands</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="nav glass">
+    <a href="/" class="logo">⚒ Golden Hands</a>
+    <div class="links"><a href="/" data-i18n="nav_home">Главная</a><a href="/contact.html" data-i18n="nav_contact">Контакты</a></div>
+    <div class="controls">
+      <select id="lang" aria-label="Language"><option value="ru">RU</option><option value="uk">UK</option><option value="en">EN</option></select>
+      <button id="themeToggle" type="button" aria-label="Toggle theme">🌙</button>
+    </div>
+  </nav>
+  <main class="order-form">
+    <h1 data-i18n="order_title">Оформление заказа</h1>
+    <p class="muted" data-i18n="order_sub">Ответьте на несколько вопросов — мы назовём ориентировочную цену и уточним детали.</p>
+    <div id="questionsBox"></div>
+    <h2 data-i18n="order_examples">Примеры (фото/видео)</h2>
+    <input type="file" id="files" multiple accept="image/*,video/*" class="file-input">
+    <h2 data-i18n="order_contact">Как с вами связаться?</h2>
+    <select id="contactType">
+      <option value="telegram">Telegram</option><option value="phone">Телефон</option><option value="email">Email</option>
+    </select>
+    <input type="text" id="contactValue" data-i18n-ph="order_contact_ph" placeholder="@username / +420... / email" required>
+    <input type="email" id="email" data-i18n-ph="order_email_ph" placeholder="Email для уведомлений (необязательно)">
+    <button id="submitOrder" class="btn-primary" type="button" data-i18n="order_submit">Отправить заказ</button>
+    <p id="orderResult" role="status"></p>
+  </main>
+  <script src="/js/i18n.js"></script><script src="/js/theme.js"></script><script src="/js/main.js"></script>
+</body>
+</html>

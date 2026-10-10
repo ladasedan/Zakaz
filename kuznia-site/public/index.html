@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Изделия ручной работы: мебель, верстаки, столы и декор на заказ.">
+  <title>Golden Hands — Мастерская</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="nav glass">
+    <a href="/" class="logo">⚒ Golden Hands</a>
+    <div class="links">
+      <a href="/" data-i18n="nav_home">Главная</a>
+      <a href="/order.html" data-i18n="nav_order">Заказать</a>
+      <a href="/contact.html" data-i18n="nav_contact">Контакты</a>
+      <a href="/admin.html" class="admin-link">Admin</a>
+    </div>
+    <div class="controls">
+      <select id="lang" aria-label="Language"><option value="ru">RU</option><option value="uk">UK</option><option value="en">EN</option></select>
+      <button id="themeToggle" type="button" aria-label="Toggle theme">🌙</button>
+    </div>
+  </nav>
+  <header class="hero">
+    <h1 data-i18n="hero_title" class="reveal">Изделия ручной работы для дома и квартиры</h1>
+    <p data-i18n="hero_sub" class="reveal">Верстаки, столы, мебель, декор — закажите что угодно. Золотые руки мастера — ваш идеальный результат.</p>
+    <a href="/order.html" class="btn-primary reveal" data-i18n="hero_cta">Рассчитать стоимость</a>
+  </header>
+  <section class="gallery" id="gallery">
+    <h2 data-i18n="gallery_title">Примеры работ</h2>
+    <div class="grid" id="worksGrid"><p class="muted">Загрузка работ…</p></div>
+  </section>
+  <footer>
+    <p id="footerContacts"></p>
+    <p>© 2026 Golden Hands</p>
+  </footer>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/theme.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
